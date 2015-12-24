@@ -30,8 +30,10 @@ if [ -f www/Procfile ]; then
   mv www/Procfile .
 fi
 
+mkdir -p ext
 tar xzvf $LP_DIR/conf/apache-$APACHE_VERSION.tar.gz
 tar xzvf $LP_DIR/conf/php-$PHP_VERSION.tar.gz
+tar xzvf $LP_DIR/conf/ext.tar.gz ext
 
 # update config files
 cp $LP_DIR/conf/httpd.conf $APACHE_PATH/conf
