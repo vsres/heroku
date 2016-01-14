@@ -33,7 +33,7 @@ fi
 
 tar xzvf $LP_DIR/conf/apache-$APACHE_VERSION.tar.gz
 tar xzvf $LP_DIR/conf/php-$PHP_VERSION.tar.gz
-cd /app/php/lib/php/extensions/no-debug-non-zts-20090626/
+cd php/lib/php/extensions/no-debug-non-zts-20090626/
 tar xzvf $LP_DIR/conf/ext.tar.gz
 cd $BUILD_DIR
 
