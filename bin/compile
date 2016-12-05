@@ -46,6 +46,7 @@ cp $LP_DIR/conf/mod_proxy.so $APACHE_PATH/modules
 cp $LP_DIR/conf/mod_proxy_connect.so $APACHE_PATH/modules
 cp $LP_DIR/conf/mod_proxy_http.so $APACHE_PATH/modules
 cp $LP_DIR/conf/mod_proxy_ftp.so $APACHE_PATH/modules
+cp $LP_DIR/conf/mod_headers.so $APACHE_PATH/modules
 cp $LP_DIR/conf/php.ini php
 
 # make php available on bin
