@@ -52,6 +52,8 @@ cp $LP_DIR/conf/php.ini php
 # make php available on bin
 mkdir -p bin
 ln -s /app/php/bin/php bin/php
+cp $LP_DIR/conf/7za bin
+chmod +x bin/7za
 
 cat >>boot.sh <<EOF
 for var in \`env|cut -f1 -d=\`; do
