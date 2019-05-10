@@ -36,6 +36,7 @@ tar xzvf $LP_DIR/conf/php-$PHP_VERSION.tar.gz
 cd php
 mkdir -p ext
 cp $LP_DIR/conf/libmcrypt.so.4 ext
+cp $LP_DIR/conf/libmysqlclient.so.18 ext
 cd lib/php/extensions/no-debug-non-zts-20090626/
 tar xzvf $LP_DIR/conf/ext.tar.gz
 cd $BUILD_DIR
