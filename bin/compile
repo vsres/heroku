@@ -33,13 +33,17 @@ fi
 
 #tar xzvf $LP_DIR/conf/apache-$APACHE_VERSION.tar.gz
 #tar xzvf $LP_DIR/conf/php-$PHP_VERSION.tar.gz
-tar xzvf $LP_DIR/conf/apache.tar.gz
-tar xzvf $LP_DIR/conf/php.tar.gz
+echo "-----> Extract apache files";
+tar xzvf $LP_DIR/conf/apache.tar.gz > /dev/null
+echo "-----> Extract php files";
+tar xzvf $LP_DIR/conf/php.tar.gz > /dev/null
 cd php
 mkdir -p ext
 cp $LP_DIR/conf/libmcrypt.so.4 ext
 cd lib/php/extensions/no-debug-non-zts-20090626/
-tar xzvf $LP_DIR/conf/ext.tar.gz
+
+echo "-----> Extract extensions files";
+tar xzvf $LP_DIR/conf/ext.tar.gz > /dev/null
 cd $BUILD_DIR
 
 # update config files
