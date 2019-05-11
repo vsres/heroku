@@ -31,25 +31,19 @@ if [ -f www/Procfile ]; then
 fi
 
 
-tar xzvf $LP_DIR/conf/apache-$APACHE_VERSION.tar.gz
-tar xzvf $LP_DIR/conf/php-$PHP_VERSION.tar.gz
+#tar xzvf $LP_DIR/conf/apache-$APACHE_VERSION.tar.gz
+#tar xzvf $LP_DIR/conf/php-$PHP_VERSION.tar.gz
+tar xzvf $LP_DIR/conf/apache.tar.gz
+tar xzvf $LP_DIR/conf/php.tar.gz
 cd php
 mkdir -p ext
 cp $LP_DIR/conf/libmcrypt.so.4 ext
-cp $LP_DIR/conf/libmysqlclient.so.18 ext
-cp $LP_DIR/conf/libpng12.so.0 ext
-cp $LP_DIR/conf/libcurl.so.4 ext
 cd lib/php/extensions/no-debug-non-zts-20090626/
 tar xzvf $LP_DIR/conf/ext.tar.gz
 cd $BUILD_DIR
 
 # update config files
 cp $LP_DIR/conf/httpd.conf $APACHE_PATH/conf
-cp $LP_DIR/conf/mod_proxy.so $APACHE_PATH/modules
-cp $LP_DIR/conf/mod_proxy_connect.so $APACHE_PATH/modules
-cp $LP_DIR/conf/mod_proxy_http.so $APACHE_PATH/modules
-cp $LP_DIR/conf/mod_proxy_ftp.so $APACHE_PATH/modules
-cp $LP_DIR/conf/mod_headers.so $APACHE_PATH/modules
 cp $LP_DIR/conf/php.ini php
 
 # make php available on bin
